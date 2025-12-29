@@ -1,0 +1,45 @@
+baseURL: "https://kiet2004-cyber.github.io/"
+languageCode: "vi"
+title: "Blog Học Tập Cá Nhân"
+theme: "PaperMod"
+
+pagination:
+  pagerSize: 5
+
+params:
+  author: "Đỗ Gia Kiệt"
+  description: "Sinh viên CNTT – Blog học tập và chia sẻ kiến thức"
+  defaultTheme: "auto"
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  customCSS:
+    - "css/custom.css"
+
+  profileMode:
+    enabled: true
+    title: "Đỗ Gia Kiệt"
+    subtitle: "Sinh viên CNTT | Hugo | GitHub"
+    imageUrl: "avatar.jpg"
+    imageWidth: 180
+    imageHeight: 180
+
+menu:
+  main:
+    - name: "Trang chủ"
+      url: "/"
+      weight: 1
+
+    - name: "Giới thiệu"
+      url: "/about/"
+      weight: 2
+
+    - name: "Bài viết"
+      url: "/posts/"
+      weight: 3
+
+    - name: "Liên hệ"
+      url: "/contact/"
+      weight: 4
