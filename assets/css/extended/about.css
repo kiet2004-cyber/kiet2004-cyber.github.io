@@ -1,0 +1,362 @@
+/* ===============================
+   HERO SECTION – SPLIT SCREEN STYLE
+   =============================== */
+
+.profile-mode {
+  /* ===== MAIN CONTAINER ===== */
+  .main {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    background: #0a0e17;
+  }
+
+  /* ===== PROFILE CARD – SPLIT LAYOUT ===== */
+  .profile {
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+
+  /* Remove pseudo elements */
+  .profile::before,
+  .profile::after {
+    display: none;
+  }
+
+  /* ===== LEFT SIDE – TEXT CONTENT ===== */
+  .profile > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 6rem;
+    background: linear-gradient(135deg, #0f1419 0%, #1a1520 100%);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Subtle gradient overlay */
+  .profile > div:first-child::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at top left, rgba(220, 38, 38, 0.08), transparent 50%),
+      radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.06), transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Content wrapper */
+  .profile > div:first-child > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== HEADINGS ===== */
+  .profile h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  /* Split text effect */
+  .profile h1 .line-1 {
+    display: block;
+    font-weight: 900;
+  }
+
+  .profile h1 .line-2 {
+    display: block;
+    font-weight: 300;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    -webkit-text-fill-color: transparent;
+    text-stroke: 2px rgba(255, 255, 255, 0.5);
+    text-fill-color: transparent;
+  }
+
+  .profile h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05em;
+  }
+
+  /* Bio text */
+  .profile p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3rem;
+    max-width: 480px;
+  }
+
+  /* ===== SOCIAL ICONS ===== */
+  .profile .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .profile .social-icons a {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .profile .social-icons a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+  }
+
+  /* ===== BUTTONS ===== */
+  .profile .buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .profile .button {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .profile .button:first-child {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  }
+
+  .profile .button:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .profile .button:not(:first-child) {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .profile .button:not(:first-child):hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* ===== RIGHT SIDE – IMAGE ===== */
+  .profile .profile-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+  }
+
+  /* Remove the glow effect */
+  .profile .profile-img::before {
+    display: none;
+  }
+
+  /* Image - full coverage */
+  .profile img,
+  .profile .avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 !important;
+    box-shadow: none;
+    transition: transform 0.6s ease;
+  }
+
+  .profile img:hover,
+  .profile .avatar:hover {
+    transform: scale(1.05);
+  }
+
+  /* Gradient overlay on image */
+  .profile .profile-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 14, 23, 0.4) 0%,
+      transparent 40%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ===== CHRISTMAS ACCENT ===== */
+  .profile > div:first-child::after {
+    content: "❄️";
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    opacity: 0.15;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .profile {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60vh 40vh;
+    }
+
+    .profile > div:first-child {
+      order: 2;
+      padding: 3rem 2rem;
+    }
+
+    .profile .profile-img {
+      order: 1;
+    }
+
+    .profile h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .profile {
+      grid-template-rows: 50vh 50vh;
+    }
+
+    .profile > div:first-child {
+      padding: 2rem 1.5rem;
+    }
+
+    .profile h1 {
+      font-size: 2.5rem;
+    }
+
+    .profile h2 {
+      font-size: 1.1rem;
+    }
+
+    .profile .buttons {
+      flex-direction: column;
+    }
+
+    .profile .button {
+      text-align: center;
+    }
+  }
+}
+
+/* ===== SNOWFALL EFFECT ===== */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translateY(100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.profile::before {
+  content: "❄";
+  position: fixed;
+  top: -10vh;
+  left: 20%;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  animation: snowfall 12s linear infinite;
+  pointer-events: none;
+  z-index: 999;
+}
+
+body::before {
+  content: "❄";
+  position: fixed;
+  top: -10vh;
+  left: 60%;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  animation: snowfall 15s linear infinite 3s;
+  pointer-events: none;
+  z-index: 999;
+}
+
+body::after {
+  content: "❄";
+  position: fixed;
+  top: -10vh;
+  left: 80%;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.35);
+  animation: snowfall 18s linear infinite 6s;
+  pointer-events: none;
+  z-index: 999;
+  /* ===== CERTIFICATE GRID ===== */
+.cert-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.cert-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cert-grid img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+}
+/* =========================
+   GLOBAL BACKGROUND IMAGE
+   ========================= */
+body {
+  background: url("/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Làm nền nội dung trong suốt nhẹ để đọc dễ hơn */
+.main,
+.post-single,
+.list {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+.header,
+.footer {
+  background: transparent !important;
+}

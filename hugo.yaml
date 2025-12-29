@@ -3,29 +3,112 @@ languageCode: "vi"
 title: "Blog Học Tập Cá Nhân"
 theme: "PaperMod"
 
+# ===============================
+# Pagination
+# ===============================
 pagination:
-  pagerSize: 5
+  pagerSize: 8
 
+# ===============================
+# Outputs (RSS + Search JSON)
+# ===============================
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# ===============================
+# Markdown & Code Highlight
+# ===============================
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    style: dracula
+    lineNos: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+
+# ===============================
+# Params (GIỮ + MỞ RỘNG)
+# ===============================
 params:
+  env: production
   author: "Đỗ Gia Kiệt"
   description: "Sinh viên CNTT – Blog học tập và chia sẻ kiến thức"
-  defaultTheme: "auto"
+  keywords:
+    - "Sinh viên CNTT"
+    - "Hugo"
+    - "GitHub Pages"
+    - "Backend"
+    - "Cyber Security"
+
+  # Giao diện
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # Hiển thị
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+
+  # TOC
+  ShowToc: true
+  TocOpen: true
+
+  # SEO image
+  images:
+    - "images/avatar.jpg"
+
+  # Custom CSS
   customCSS:
     - "css/custom.css"
 
+  # ===============================
+  # Profile Mode (Portfolio)
+  # ===============================
   profileMode:
     enabled: true
     title: "Đỗ Gia Kiệt"
-    subtitle: "Sinh viên CNTT | Hugo | GitHub"
+    subtitle: |
+      **Sinh viên CNTT** | Backend • Web • Cyber Security  
+      <br/> Còn debug thì còn fixbug.
     imageUrl: "avatar.jpg"
-    imageWidth: 180
-    imageHeight: 180
+    imageWidth: 220
+    imageHeight: 220
+    imageTitle: "Đỗ Gia Kiệt | CNTT"
 
+    buttons:
+      - name: "👤 Giới thiệu"
+        url: "/about/"
+      - name: "📝 Bài viết"
+        url: "/posts/"
+      - name: "📬 Liên hệ"
+        url: "/contact/"
+
+  # ===============================
+  # Social Icons
+  # ===============================
+  socialIcons:
+    - name: github
+      url: "https://github.com/kiet2004-cyber"
+    - name: facebook
+      url: "https://facebook.com/yourname"
+    - name: email
+      url: "mailto:yourmail@gmail.com"
+
+# ===============================
+# MENU – GIỮ NGUYÊN CỦA BẠN
+# ===============================
 menu:
   main:
     - name: "Trang chủ"
@@ -43,3 +126,40 @@ menu:
     - name: "Liên hệ"
       url: "/contact/"
       weight: 4
+
+# ===============================
+# Taxonomies
+# ===============================
+taxonomies:
+  category: "categories"
+  tag: "tags"
+  series: "series"
+
+# ===============================
+# Sitemap
+# ===============================
+sitemap:
+  changefreq: "weekly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+# ===============================
+# Related Posts
+# ===============================
+related:
+  threshold: 80
+  includeNewer: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 80
+
+# ===============================
+# Minify
+# ===============================
+minify:
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false

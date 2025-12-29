@@ -1,0 +1,273 @@
+/* ===============================
+   HOME – PROFILE MODE (CHRISTMAS EDITION – REFINED & PROFESSIONAL)
+   =============================== */
+
+/* ===== MAIN ===== */
+.profile-mode .main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(220, 38, 38, 0.12), transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(34, 197, 94, 0.1), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(251, 191, 36, 0.08), transparent 60%),
+    linear-gradient(135deg, #0d1117, #161218);
+}
+
+/* ===== PROFILE CARD ===== */
+.profile-mode .profile {
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  padding: 64px 72px;
+  border-radius: 32px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(220, 38, 38, 0.08);
+}
+
+/* Overlay */
+.profile-mode .profile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.06),
+    rgba(34, 197, 94, 0.05),
+    rgba(251, 191, 36, 0.04)
+  );
+  opacity: 0.7;
+  pointer-events: none;
+  border-radius: 32px;
+}
+
+/* Watermark */
+.profile-mode .profile::before {
+  content: "🎄 MERRY CHRISTMAS 2025";
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: rgba(220, 38, 38, 0.07);
+  pointer-events: none;
+}
+
+/* ===== TEXT ===== */
+.profile-mode .profile h1 {
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.profile-mode .profile h2 {
+  font-size: 1.55rem;
+  margin-bottom: 36px;
+  color: rgba(254, 226, 226, 0.95);
+}
+
+/* ===== SOCIAL ===== */
+.profile-mode .profile .social-icons {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.profile-mode .profile .social-icons a {
+  font-size: 1.9rem;
+  color: rgba(251, 191, 36, 0.8);
+  transition: 0.3s;
+}
+
+.profile-mode .profile .social-icons a:hover {
+  color: #fbbf24;
+  transform: translateY(-6px);
+}
+
+/* ===== BUTTONS ===== */
+.profile-mode .profile .buttons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.profile-mode .profile .button {
+  padding: 16px 40px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.35);
+  transition: 0.3s;
+}
+
+.profile-mode .profile .button:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== IMAGE SIDE ===== */
+.profile-mode .profile .profile-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-mode .profile img,
+.profile-mode .profile .avatar {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.7),
+    0 0 0 4px rgba(220, 38, 38, 0.5),
+    0 0 0 8px rgba(34, 197, 94, 0.4),
+    0 0 60px rgba(251, 191, 36, 0.4);
+  transition: 0.4s;
+}
+
+.profile-mode .profile img:hover {
+  transform: scale(1.04);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .profile-mode .profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-mode .profile .buttons,
+  .profile-mode .profile .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-mode .profile img {
+    width: 320px;
+    height: 320px;
+  }
+}
+.hero-split {
+  align-items: center;
+  padding: 0 8vw;
+  gap: 80px;
+}
+
+/* LEFT */
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--primary);
+}
+
+.hero-left h1 span {
+  color: #dc2626;
+}
+
+.hero-sub {
+  margin: 32px 0;
+  font-size: 1.3rem;
+  color: var(--secondary);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons a {
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.hero-right img {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  box-shadow: 0 40px 100px rgba(0,0,0,.6);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* ===== GLOBAL SNOW ===== */
+#snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+.snowflake {
+  position: absolute;
+  top: -30px;
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.85;
+  animation: snow-fall linear infinite;
+}
+
+.snowflake::before {
+  content: "❄";
+}
+
+@keyframes snow-fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* ===== HERO SPLIT (nếu dùng) ===== */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+/* =========================
+   GLOBAL BACKGROUND IMAGE
+   ========================= */
+body {
+  background: url("/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Làm nền nội dung trong suốt nhẹ để đọc dễ hơn */
+.main,
+.post-single,
+.list {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
