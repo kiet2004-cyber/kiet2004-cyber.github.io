@@ -50,13 +50,13 @@ Mục tiêu của tôi là xây dựng các hệ thống **ổn định – dễ
 
 <details class="cert-item">
   <summary>📜 JavaScript Essentials 1</summary>
-  <img src="/certificates/cert-js-essentials.png"
+  <img src="/certificates/cert-java.png" 
        alt="JavaScript Essentials 1" />
 </details>
 
 <details class="cert-item">
   <summary>📜 Java Essentials 2</summary>
-  <img src="/certificates/cert-java.png"
+    <img src="/certificates/cert-js-essentials.png"
        alt="Java Essentials 2" />
 </details>
 
